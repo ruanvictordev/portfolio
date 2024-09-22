@@ -20,7 +20,7 @@ export default function Join() {
             desenvolvedores.
           </p>
           <div className="mt-auto">
-            <a href="" target="_blank">
+            <a href="https://forms.gle/tN8sHnZx2b5Bd4R8A" target="_blank">
               <Button variant="secondary">Formulário</Button>
             </a>
           </div>
@@ -35,7 +35,7 @@ export default function Join() {
             inovadoras.
           </p>
           <div className="mt-auto">
-            <a href="" target="_blank">
+            <a href="https://forms.gle/SgZWHDDbT7HGKbMZ6" target="_blank">
               <Button variant="secondary">Formulário</Button>
             </a>
           </div>
