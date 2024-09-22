@@ -1,5 +1,3 @@
-import { AvatarImage } from "@radix-ui/react-avatar";
-import { Avatar } from "../ui/avatar";
 import { Button } from "../ui/button";
 
 export default function Home() {
