@@ -10,7 +10,7 @@ export default function Wiki() {
         </p>
       </div>
       <section className="w-full flex flex-col text-center justify-center items-center max-w-3xl gap-6 mx-auto my-12">
-        <h1 className="text-xl font-bold">Nossa Wiki</h1>
+        <h1 className="text-xl font-bold w-full">Nossa Wiki</h1>
         <p>
           Nós criamos um guia para te ajudar a entender como a comunidade está
           organizada desde o Discord, Projetos e Eventos. Confira. Caso ainda
