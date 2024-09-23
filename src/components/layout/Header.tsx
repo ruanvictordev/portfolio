@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   NavigationMenuItem,
   NavigationMenuList,
@@ -11,6 +12,10 @@ import { AvatarImage } from "@radix-ui/react-avatar";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 
 const Header = () => {
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
+  const closeSheet = () => setIsSheetOpen(false);
+
   return (
     <nav className="w-full sticky top-0 z-10 border-b-[1px] border-solid border-neutral-100 bg-white/75 py-2 dark:border-neutral-900 dark:bg-black/75 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,16 +39,25 @@ const Header = () => {
                   <a href="#events">Eventos</a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
+                  <a href="#join">Participe</a>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
                   <a href="#organizers">Organizadores</a>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <a href="https://forms.gle/ePTMgwdr3e9WMQg87" target="_blank" rel="noopener noreferrer"><Button>Discord</Button></a>
+            <a
+              href="https://forms.gle/ePTMgwdr3e9WMQg87"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Discord</Button>
+            </a>
             <ModeToggle />
           </div>
 
           <div className="md:hidden flex gap-4 items-center">
-            <Sheet>
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button className="px-2">
                   <MenuIcon />
@@ -53,21 +67,28 @@ const Header = () => {
                 <NavigationMenu>
                   <NavigationMenuList className="flex flex-col gap-4">
                     <NavigationMenuItem>
-                      <a href="#about">Sobre</a>
+                      <a href="#about" onClick={closeSheet}>Sobre</a>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <a href="#projects">Projetos</a>
+                      <a href="#projects" onClick={closeSheet}>Projetos</a>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <a href="#events">Eventos</a>
+                      <a href="#events" onClick={closeSheet}>Eventos</a>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <a href="#join">Participe</a>
+                      <a href="#join" onClick={closeSheet}>Participe</a>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <a href="#organizers">Organizadores</a>
+                      <a href="#organizers" onClick={closeSheet}>Organizadores</a>
                     </NavigationMenuItem>
-                    <a href="https://forms.gle/ePTMgwdr3e9WMQg87" target="_blank" rel="noopener noreferrer"><Button>Discord</Button></a>
+                    <a
+                      href="https://forms.gle/ePTMgwdr3e9WMQg87"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={closeSheet}
+                    >
+                      <Button>Discord</Button>
+                    </a>
                   </NavigationMenuList>
                 </NavigationMenu>
               </SheetContent>
