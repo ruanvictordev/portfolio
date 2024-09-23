@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export default function Join() {
   return (
-    <div className="py-12 p-32 max-md:p-4" id="organizers">
+    <div className="py-12 p-32 max-md:p-4" id="join">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold">Junte-se à Nossa Comunidade</h1>
         <p className="text-muted-foreground">
