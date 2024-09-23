@@ -19,21 +19,23 @@ export default function About() {
         </div>
         <div className="flex flex-col gap-2 max-w-lg">
           <p className="text-base leading-relaxed text-justify">
-            A comunidade <Badge>Code Warriors</Badge> foi criada no IFPI Campus Pedro II com o
-            objetivo de unir estudantes apaixonados por tecnologia.
+            A comunidade <Badge>Code Warriors</Badge> foi criada no IFPI Campus
+            Pedro II com o objetivo de unir estudantes apaixonados por
+            tecnologia.
           </p>
           <p className="text-base leading-relaxed text-justify">
-            Aqui, promovemos o desenvolvimento de projetos com mentoria,
-            networking e incentivo a apresentações em eventos, oferecendo um
-            ambiente colaborativo e enriquecedor. Os membros têm acesso a
-            mentoria especializada, aprimorando suas habilidades e expandindo
-            suas redes de contatos.
+            Aqui, promovemos o desenvolvimento de projetos open-source com
+            mentoria, networking e incentivo a apresentações em eventos,
+            oferecendo um ambiente colaborativo e enriquecedor. Os membros têm
+            acesso a mentoria especializada, aprimorando suas habilidades e
+            expandindo suas redes de contatos.
           </p>
           <p className="text-base leading-relaxed text-justify">
             Se você busca um espaço para crescer e se conectar com outros
             apaixonados por tecnologia, junte-se à comunidade Code Warriors.
             Venha fazer parte dessa jornada incrível!
           </p>
+          <p>Veja mais sobre nós na <a className="underline font-semibold" href="https://github.com/codewarriorsdevs/guia">nossa Wiki</a>.</p>
         </div>
       </section>
     </div>

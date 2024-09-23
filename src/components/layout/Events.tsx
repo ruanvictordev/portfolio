@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { useYoutubeVideos } from "../../hooks/useYoutubeVideos";
 import { Skeleton } from "../ui/skeleton"; 
+import { useYoutubeVideos } from "../../hooks/useYoutubeVideos";
+
 
 const VideoCard: React.FC<{
   video?: { id: string; title: string; thumbnail: string };
@@ -24,8 +24,8 @@ const VideoCard: React.FC<{
         <iframe
           width="100%"
           height="215"
-          src={`https://www.youtube.com/embed/${video.id}`}
-          title={video.title}
+          src={`https://www.youtube.com/embed/${video!.id}`}
+          title={video?.title}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -44,8 +44,7 @@ const VideoCard: React.FC<{
 );
 
 export default function CommunityEvents() {
-  const { youtubeVideos, loading, error } = useYoutubeVideos();
-  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const { youtubeVideos, activeVideo, setActiveVideo, loading } = useYoutubeVideos();
 
   return (
     <div className="bg-secondary p-32 max-md:p-4" id="events">
@@ -58,17 +57,20 @@ export default function CommunityEvents() {
 
       {loading && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <VideoCard key={index} loading activeVideo={activeVideo} setActiveVideo={setActiveVideo} />
+          {Array.from({ length: 3 }).map((_, index) => (
+            <VideoCard
+              key={index}
+              loading
+              activeVideo={activeVideo}
+              setActiveVideo={setActiveVideo}
+            />
           ))}
         </div>
       )}
 
-      {error && <p className="w-full text-center">{error}</p>}
-
-      {!loading && !error && (
+      {!loading && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {youtubeVideos.map(video => (
+          {youtubeVideos.map((video) => (
             <VideoCard
               key={video.id}
               video={video}

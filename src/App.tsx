@@ -6,6 +6,7 @@ import CommunityEvents from "./components/layout/Events";
 import Organizers from "./components/layout/Organizers";
 import CommunityFooter from "./components/layout/Footer";
 import Join from "./components/layout/Join";
+import Wiki from "./components/layout/Wiki";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Projects />
         <CommunityEvents />
         <Join />
+        <Wiki />
         <Organizers />
         <CommunityFooter />
       </main>
