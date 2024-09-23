@@ -21,7 +21,7 @@ export const useYoutubeVideos = () => {
   ];
 
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
 
   return {
     youtubeVideos,
