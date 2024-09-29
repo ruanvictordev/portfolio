@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Skeleton } from "../ui/skeleton"; 
+import { Skeleton } from "../ui/skeleton";
 import { useYoutubeVideos } from "../../hooks/useYoutubeVideos";
-
 
 const VideoCard: React.FC<{
   video?: { id: string; title: string; thumbnail: string };
@@ -14,7 +13,7 @@ const VideoCard: React.FC<{
       {loading ? (
         <Skeleton className="h-6 w-3/4 mb-2" />
       ) : (
-        <CardTitle className="text-lg">{video?.title}</CardTitle>
+        <CardTitle className="text-md">{video?.title}</CardTitle>
       )}
     </CardHeader>
     <CardContent>

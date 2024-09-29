@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { InstagramLogoIcon } from "@radix-ui/react-icons";
-import { Youtube } from "lucide-react";
+import { YoutubeIcon } from "lucide-react";
 
 export default function CommunityFooter() {
   return (
@@ -18,7 +18,7 @@ export default function CommunityFooter() {
             <GitHubLogoIcon />
           </Button>
           <Button className="px-2" variant="outline" onClick={() => window.open('https://youtube.com/codewarriorsdevs', '_blank')}>
-            <Youtube />
+            <YoutubeIcon />
           </Button>
           <Button className="px-2" variant="outline" onClick={() => window.open('https://instagram.com/codewarriorsdevs', '_blank')}>
             <InstagramLogoIcon />
