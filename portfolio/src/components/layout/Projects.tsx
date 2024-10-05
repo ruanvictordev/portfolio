@@ -51,15 +51,15 @@ const Projects: React.FC = () => {
   const { repos, loading, error } = useFetchRepos("finished", "ruanvictordev");
 
   return (
-    <div className="p-24 max-md:p-4" id="projects">
+    <div className="flex flex-col items-center justify-center w-full p-24 max-md:p-4" id="projects">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold">Projects</h1>
         <p className="text-muted-foreground">
-          See my bests projects
+          See my best projects
         </p>
       </div>
-      <section className="w-full flex justify-around gap-6 items-center my-12 max-md:flex-col">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <section className="w-full flex justify-center items-center my-12">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl">
           {loading ? (
             Array.from({ length: 6 }).map((_, index) => (
               <ProjectCard key={index} loading />
