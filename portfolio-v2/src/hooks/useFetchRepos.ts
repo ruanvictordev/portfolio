@@ -9,7 +9,7 @@ interface Repo {
   topics: string[]; 
 }
 
-export const useFetchRepos = (topic: string) => {
+export const useFetchRepos = (topic: string, user: string) => {
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -18,7 +18,7 @@ export const useFetchRepos = (topic: string) => {
     const fetchRepos = async () => {
       try {
         const response = await fetch(
-          `https://api.github.com/search/repositories?q=topic:${topic}`
+          `https://api.github.com/search/repositories?q=user:${user}+topic:${topic}`
         );
         const data = await response.json();
 

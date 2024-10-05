@@ -32,9 +32,9 @@ export default {
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
   			muted: '#e5e7eb',
-			'muted-foreground': '#6b7280',
-			accent: '#f1f5f9', 
-			'accent-foreground': '#000000', 
+  			'muted-foreground': '#6b7280',
+  			accent: '#f1f5f9',
+  			'accent-foreground': '#000000',
   			destructive: {
   				DEFAULT: 'hsl(var(--destructive))',
   				foreground: 'hsl(var(--destructive-foreground))'
@@ -49,6 +49,40 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
+  		},
+  		keyframes: {
+  			wave: {
+  				'0%': {
+  					transform: 'rotate(0deg)'
+  				},
+  				'50%': {
+  					transform: 'rotate(20deg)'
+  				},
+  				'100%': {
+  					transform: 'rotate(0deg)'
+  				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			wave: 'wave 1s ease-in-out infinite',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },

@@ -22,37 +22,24 @@ const Header = () => {
         <div className="flex justify-between h-16 items-center">
           <div className="flex gap-4 items-center">
             <Avatar>
-              <AvatarImage src="https://avatars.githubusercontent.com/u/148078462?s=200&v=4" />
+              <AvatarImage src="https://avatars.githubusercontent.com/u/62728646?v=4" />
             </Avatar>
-            <h1 className="text-lg font-semibold max-md:text-base">Code Warriors</h1>
+            <h1 className="text-lg font-semibold max-md:text-base">Ruan Victor</h1>
           </div>
           <div className="hidden md:flex items-center space-x-4">
             <NavigationMenu>
               <NavigationMenuList className="flex gap-4">
                 <NavigationMenuItem>
-                  <a href="#about">Sobre</a>
+                  <a href="#about">About</a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <a href="#projects">Projetos</a>
+                  <a href="#projects">Projects</a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <a href="#events">Eventos</a>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <a href="#join">Participe</a>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <a href="#organizers">Organizadores</a>
+                  <a href="#journey">Journey</a>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <a
-              href="https://forms.gle/ePTMgwdr3e9WMQg87"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button>Discord</Button>
-            </a>
             <ModeToggle />
           </div>
 
@@ -67,28 +54,14 @@ const Header = () => {
                 <NavigationMenu>
                   <NavigationMenuList className="flex flex-col gap-4">
                     <NavigationMenuItem>
-                      <a href="#about" onClick={closeSheet}>Sobre</a>
+                      <a href="#about" onClick={closeSheet}>About</a>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <a href="#projects" onClick={closeSheet}>Projetos</a>
+                      <a href="#projects" onClick={closeSheet}>Projects</a>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <a href="#events" onClick={closeSheet}>Eventos</a>
+                      <a href="#journey" onClick={closeSheet}>Journey</a>
                     </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <a href="#join" onClick={closeSheet}>Participe</a>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <a href="#organizers" onClick={closeSheet}>Organizadores</a>
-                    </NavigationMenuItem>
-                    <a
-                      href="https://forms.gle/ePTMgwdr3e9WMQg87"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={closeSheet}
-                    >
-                      <Button>Discord</Button>
-                    </a>
                   </NavigationMenuList>
                 </NavigationMenu>
               </SheetContent>

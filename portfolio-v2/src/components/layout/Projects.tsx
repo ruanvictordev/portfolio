@@ -38,7 +38,7 @@ const ProjectCard: React.FC<{ repo?: any; loading?: boolean }> = ({ repo, loadin
           <a href={repo.html_url} className="w-full" target="_blank" rel="noopener noreferrer">
             <Button variant={"outline"} className="flex w-full gap-2">
               <GitHubLogoIcon />
-              Ver no Github
+              See on Github
             </Button>
           </a>
         </>
@@ -48,14 +48,14 @@ const ProjectCard: React.FC<{ repo?: any; loading?: boolean }> = ({ repo, loadin
 );
 
 const Projects: React.FC = () => {
-  const { repos, loading, error } = useFetchRepos("projeto-ativo");
+  const { repos, loading, error } = useFetchRepos("finished", "ruanvictordev");
 
   return (
-    <div className="p-32 max-md:p-4" id="projects">
+    <div className="p-24 max-md:p-4" id="projects">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold">Projetos Ativos</h1>
+        <h1 className="text-3xl font-bold">Projects</h1>
         <p className="text-muted-foreground">
-          Confira os projetos em desenvolvimento que estamos apoiando
+          See my bests projects
         </p>
       </div>
       <section className="w-full flex justify-around gap-6 items-center my-12 max-md:flex-col">
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
               <ProjectCard key={index} loading />
             ))
           ) : error ? (
-            <p>{error}</p>
+            <p className="flex items-center justify-center text-center">{error}</p>
           ) : (
             repos.map(repo => (
               <ProjectCard key={repo.id} repo={repo} />
