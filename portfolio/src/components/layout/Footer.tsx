@@ -5,7 +5,7 @@ import { InstagramLogoIcon } from "@radix-ui/react-icons";
 
 export default function CommunityFooter() {
   return (
-    <div className="px-36 max-md:px-2 w-full sticky top-0 z-10 border-t-[1px] border-solid border-neutral-100 py-2 dark:border-neutral-900">
+    <div className="px-40 max-md:px-4 max-lg:px-11 w-full sticky top-0 z-10 border-t-[1px] border-solid border-neutral-100 py-2 dark:border-neutral-900">
       <div className="mx-auto flex max-md:flex-row justify-between items-center gap-4">
         <div className="flex text-center justify-center items-center md:text-left">
           <p className="text-sm">Ruan Victor © {new Date().getFullYear()}</p>

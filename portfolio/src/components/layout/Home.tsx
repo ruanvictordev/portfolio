@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 export default function Home() {
   return (
     <section className="w-full">
-      <div className="mx-auto px-2 max-sm:px-6 max-lg:px-8">
+      <div className="mx-auto">
         <div className="flex justify-between items-center h-5/6 max-md:flex-col">
           <div className="flex flex-col gap-4 max-w-lg max-md:text-center">
             <h1 className="flex gap-2 text-2xl font-bold max-md:justify-center">

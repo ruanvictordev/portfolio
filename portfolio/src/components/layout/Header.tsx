@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <nav className="w-full sticky top-0 z-10 border-b-[1px] border-solid border-neutral-100 bg-white/75 py-2 dark:border-neutral-900 dark:bg-black/75 backdrop-blur-xl">
-      <div className="mx-auto px-36 max-md:px-2">
+      <div className="mx-auto px-40 max-lg:px-11 max-md:px-4">
         <div className="flex justify-between h-16 items-center">
           <div className="flex gap-4 items-center">
             <Avatar>

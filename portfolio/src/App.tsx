@@ -10,7 +10,7 @@ export default function App() {
   return (
     <>
       <Header></Header>
-      <main className="w-full flex flex-col gap-48 px-36 py-32 max-md:px-2">
+      <main className="w-full flex flex-col gap-48 px-40 py-32 max-lg:px-11 max-md:px-4">
         <Home />
         <About />
         <Projects />
