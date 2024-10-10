@@ -15,7 +15,7 @@ import {
 
 export default function Journey() {
   return (
-    <div className="p-24 max-md:p-4" id="journey">
+    <div className="w-full" id="journey">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold">My Journey</h1>
         <p className="text-muted-foreground">

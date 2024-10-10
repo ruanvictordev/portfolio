@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
   const { repos, loading, error } = useFetchRepos("finished", "ruanvictordev");
 
   return (
-    <div className="flex flex-col items-center justify-center w-full p-24 max-md:p-4" id="projects">
+    <div className="flex flex-col w-full" id="projects">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold">Projects</h1>
         <p className="text-muted-foreground">
@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
         </p>
       </div>
       <section className="w-full flex justify-center items-center my-12">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 w-full">
           {loading ? (
             Array.from({ length: 6 }).map((_, index) => (
               <ProjectCard key={index} loading />

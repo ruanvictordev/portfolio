@@ -2,8 +2,8 @@ import { Badge } from "../ui/badge";
 
 export default function About() {
   return (
-    <section className="w-full py-24 max-md:py-30" id="about">
-      <div className="max-w-7xl mx-auto px-2 max-sm:px-6 max-lg:px-8">
+    <section className="w-full" id="about">
+      <div className="mx-auto px-2 max-sm:px-6 max-lg:px-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold">About me</h1>
           <p className="text-muted-foreground">
