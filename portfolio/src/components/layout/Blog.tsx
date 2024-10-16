@@ -49,14 +49,14 @@ export default function DevToBlog({ username }: { username: string }) {
             <a href={article.url} target="_blank" key={article.id}>
               <Card className="w-full flex justify-between items-center hover:cursor-pointer hover:bg-secondary hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="flex gap-2 m-0 p-0 text-lg max-md:text-sm">
+                  <CardTitle className="flex gap-2 m-0 p-0 text-lg max-md:text-xs">
                     <p className="text-muted-foreground">
                       {formatDate(article.published_at)}
                     </p>
                     {article.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="py-0 text-lg max-md:text-sm flex justify-center gap-2 items-center">
+                <CardContent className="py-0 text-lg max-md:text-xs flex justify-center gap-2 items-center">
                   <p>{article.page_views_count} views</p>
                   <a
                     href={article.url}
@@ -64,7 +64,7 @@ export default function DevToBlog({ username }: { username: string }) {
                     rel="noopener noreferrer"
                     className="underline ml-2"
                   >
-                    Ler mais...
+                    Read...
                   </a>
                 </CardContent>
               </Card>
