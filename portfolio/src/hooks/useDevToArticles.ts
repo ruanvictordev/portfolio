@@ -16,16 +16,16 @@ export const useDevToArticles = (username: string) => {
   useEffect(() => {
     const fetchArticles = async () => {
       setLoading(true);
-      setError(null); 
+      setError(null);
 
       try {
         const response = await fetch(
-          `https://dev.to/api/articles?username=${username}&per_page=30`
+          `https://cors-anywhere.herokuapp.com/https://dev.to/api/articles?username=${username}`
         );
 
         if (!response.ok) {
           const errorText = await response.text();
-          throw new Error(`Erro: ${response.status} - ${errorText}`);
+          throw new Error(`Error: ${response.status} - ${errorText}`);
         }
 
         const data = await response.json();
@@ -34,11 +34,11 @@ export const useDevToArticles = (username: string) => {
           setArticles(data);
         } else {
           setArticles([]);
-          console.warn("The response API isn't format.", data);
+          console.warn("The API response format is unexpected.", data);
         }
       } catch (error) {
-        console.error("Error while search articles on DEV.to:", error);
-        setError("Error while search articles. Try again later.");
+        console.error("Error fetching articles from DEV.to:", error);
+        setError("Error fetching articles. Please try again later.");
       } finally {
         setLoading(false);
       }
