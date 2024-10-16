@@ -40,7 +40,7 @@ export default function DevToBlog({ username }: { username: string }) {
       )}
 
       {!loading && articles.length === 0 && (
-        <p className="text-center">Nenhum artigo encontrado.</p>
+        <p className="text-center">No articles found.</p>
       )}
 
       {!loading && articles.length > 0 && (

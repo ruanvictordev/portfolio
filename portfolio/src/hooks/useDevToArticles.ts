@@ -34,11 +34,11 @@ export const useDevToArticles = (username: string) => {
           setArticles(data);
         } else {
           setArticles([]);
-          console.warn("A resposta da API não está no formato esperado.", data);
+          console.warn("The response API isn't format.", data);
         }
       } catch (error) {
-        console.error("Erro ao buscar artigos do DEV.to:", error);
-        setError("Erro ao buscar artigos. Tente novamente mais tarde.");
+        console.error("Error while search articles on DEV.to:", error);
+        setError("Error while search articles. Try again later.");
       } finally {
         setLoading(false);
       }
