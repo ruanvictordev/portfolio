@@ -92,7 +92,7 @@ export default function Journey() {
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="text-left">
-                      (2024 - Today) Freelancer.
+                      (2024-Today) Freelancer.
                     </AccordionTrigger>
                     <AccordionContent className="min-h-[100px]"> 
                       In this experience, I learned:
@@ -108,7 +108,7 @@ export default function Journey() {
 
                   <AccordionItem value="item-2">
                     <AccordionTrigger className="text-left">
-                      (2024 - Today) Community Leader - Code Warriors.
+                      (2024-Today) Community Leader - Code Warriors.
                     </AccordionTrigger>
                     <AccordionContent className="min-h-[100px]"> 
                       In this experience, I learned:
