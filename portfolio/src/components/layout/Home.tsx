@@ -36,7 +36,7 @@ export default function Home() {
           <div className="flex-shrink-0 max-md:hidden">
             <img
               className="w-64 rounded-full"
-              src="https://i.ibb.co/QYLW68t/Whats-App-Image-2024-09-17-at-14-42-47.jpg"
+              src="https://i.ibb.co/Jq0M7hW/1000038608.jpg"
               alt="Ruan Victor profile"
             />
           </div>
