@@ -28,7 +28,7 @@ export default function Home() {
               source projects.
             </p>
             <div className="flex gap-4 max-md:flex-col max-md:w-full">
-              <a href="https://github.com/user-attachments/files/17416778/Ruan-Curriculo-ATS.EN-US.pdf" download>
+              <a href="https://github.com/user-attachments/files/17451928/RuanVictor-Curriculo.pdf" download>
                 <Button className="max-md:w-3/5">Download CV</Button>
               </a>
             </div>
