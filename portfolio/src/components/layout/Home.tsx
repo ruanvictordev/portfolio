@@ -33,10 +33,7 @@ export default function Home() {
             </p>
             <ReactAudioPlayer className="max-md:w-2/3" src="/audio/ia_audio.wav" controls />
             <div className="flex gap-4 max-md:flex-col max-md:w-full">
-              <a
-                href="https://github.com/user-attachments/files/17416778/Ruan-Curriculo-ATS.EN-US.pdf"
-                download
-              >
+              <a href="https://github.com/user-attachments/files/17500566/Ruan-Curriculo-ATS.EN-US.pdf" download>
                 <Button className="max-md:w-3/5">Download CV</Button>
               </a>
             </div>
@@ -44,7 +41,7 @@ export default function Home() {
           <div className="flex-shrink-0 max-md:hidden">
             <img
               className="w-64 rounded-full"
-              src="https://i.ibb.co/QYLW68t/Whats-App-Image-2024-09-17-at-14-42-47.jpg"
+              src="https://i.ibb.co/Jq0M7hW/1000038608.jpg"
               alt="Ruan Victor profile"
             />
           </div>
