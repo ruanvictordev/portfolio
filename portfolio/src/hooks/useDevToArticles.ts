@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 
 interface Article {
   id: number;
+  cover_image: string;
   title: string;
-  published_at: string;
+  readable_publish_date: string;
   positive_reactions_count: number;
   url: string;
 }
@@ -29,6 +30,8 @@ export const useDevToArticles = (username: string) => {
         }
 
         const data = await response.json();
+
+        console.log(data);
 
         if (Array.isArray(data)) {
           setArticles(data);

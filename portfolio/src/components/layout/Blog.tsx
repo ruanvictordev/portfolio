@@ -1,11 +1,92 @@
+import { Badge } from "lucide-react";
 import { useDevToArticles } from "../../hooks/useDevToArticles";
+import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
-const formatDate = (dateString: string): string => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-CA");
-};
+// ProjectCard atualizado
+const ProjectCard: React.FC<{ repo?: any; loading?: boolean }> = ({ repo, loading }) => (
+  <Card className="hover:shadow-lg transition-shadow">
+    <CardHeader>
+      {loading ? (
+        <Skeleton className="h-6 w-3/4 mb-2" />
+      ) : (
+        <CardTitle className="text-2xl font-bold">{repo.name}</CardTitle>
+      )}
+    </CardHeader>
+    <CardContent className="flex flex-col w-full gap-4">
+      {loading ? (
+        <>
+          <Skeleton className="h-4 w-full" />
+          <div className="flex flex-wrap gap-2 mt-4">
+            <Skeleton className="h-4 w-16" />
+            <Skeleton className="h-4 w-16" />
+          </div>
+          <Button variant={"outline"} className="flex w-full gap-2 opacity-50 cursor-not-allowed">
+            <Skeleton className="h-4 w-full" />
+          </Button>
+        </>
+      ) : (
+        <>
+          <p className="text-justify">{repo.description || "Sem descrição"}</p>
+          <div className="flex flex-wrap gap-2 mt-4">
+            {repo.topics.map((topic: string) => (
+              <Badge key={topic}>#{topic}</Badge>
+            ))}
+          </div>
+          <a href={repo.html_url} className="w-full" target="_blank" rel="noopener noreferrer">
+            <Button variant={"outline"} className="flex w-full gap-2">
+              <GitHubLogoIcon />
+              See on Github
+            </Button>
+          </a>
+        </>
+      )}
+    </CardContent>
+  </Card>
+);
+
+// BlogCard reutilizando o layout de ProjectCard
+const BlogCard: React.FC<{ article?: any; loading?: boolean }> = ({ article, loading }) => (
+  <Card className="hover:shadow-lg transition-shadow">
+    <CardHeader>
+      {loading ? (
+        <Skeleton className="h-6 w-3/4 mb-2" />
+      ) : (
+        <>
+          <img src={article.cover_image} />
+          <CardTitle className="text-2xl font-bold">{article.title}</CardTitle>
+        </>
+      )}
+    </CardHeader>
+    <CardContent className="flex flex-col w-full gap-4">
+      {loading ? (
+        <Skeleton className="h-4 w-full" />
+      ) : (
+        <p className="text-justify">
+          {article.description || "No description available."}
+        </p>
+      )}
+      {loading ? (
+        <Skeleton className="h-4 w-1/2 mt-4" />
+      ) : (
+        <p className="text-muted-foreground mt-4">
+          Published on: {article.readable_publish_date}
+        </p>
+      )}
+      {loading ? (
+        <Skeleton className="h-4 w-full" />
+      ) : (
+        <a href={article.url} target="_blank" rel="noopener noreferrer" className="w-full">
+          <Button variant={"outline"} className="flex w-full gap-2">
+            Read Article
+          </Button>
+        </a>
+      )}
+    </CardContent>
+  </Card>
+);
 
 export default function DevToBlog({ username }: { username: string }) {
   const { articles, loading, error } = useDevToArticles(username);
@@ -22,19 +103,9 @@ export default function DevToBlog({ username }: { username: string }) {
       {error && <p className="text-center">{error}</p>}
 
       {loading && (
-        <div className="flex flex-col gap-4 w-full items-center">
-          {Array.from({ length: 3 }).map((_, index) => (
-            <Card
-              key={index}
-              className="hover:shadow-lg transition-shadow w-96 flex justify-center items-center"
-            >
-              <CardHeader className="flex w-full justify-center items-center">
-                <Skeleton className="h-6 w-full mb-2" />
-              </CardHeader>
-              <CardContent className="flex justify-center items-center m-0 p-0">
-                <Skeleton className="h-12 w-full" />
-              </CardContent>
-            </Card>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <BlogCard key={index} loading />
           ))}
         </div>
       )}
@@ -44,31 +115,9 @@ export default function DevToBlog({ username }: { username: string }) {
       )}
 
       {!loading && articles.length > 0 && (
-        <div className="w-full flex flex-col gap-4">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
-            <a href={article.url} target="_blank" key={article.id}>
-              <Card className="w-full flex justify-between items-center hover:cursor-pointer hover:bg-secondary hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="flex gap-2 m-0 p-0 text-lg max-md:text-xs">
-                    <p className="text-muted-foreground">
-                      {formatDate(article.published_at)}
-                    </p>
-                    {article.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="py-0 text-lg max-md:text-xs flex justify-center gap-2 items-center">
-                  <p>{article.positive_reactions_count} likes</p>
-                  <a
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline ml-2"
-                  >
-                    Read...
-                  </a>
-                </CardContent>
-              </Card>
-            </a>
+            <BlogCard key={article.id} article={article} />
           ))}
         </div>
       )}
