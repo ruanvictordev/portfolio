@@ -1,53 +1,8 @@
-import { Badge } from "lucide-react";
 import { useDevToArticles } from "../../hooks/useDevToArticles";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
-// ProjectCard atualizado
-const ProjectCard: React.FC<{ repo?: any; loading?: boolean }> = ({ repo, loading }) => (
-  <Card className="hover:shadow-lg transition-shadow">
-    <CardHeader>
-      {loading ? (
-        <Skeleton className="h-6 w-3/4 mb-2" />
-      ) : (
-        <CardTitle className="text-2xl font-bold">{repo.name}</CardTitle>
-      )}
-    </CardHeader>
-    <CardContent className="flex flex-col w-full gap-4">
-      {loading ? (
-        <>
-          <Skeleton className="h-4 w-full" />
-          <div className="flex flex-wrap gap-2 mt-4">
-            <Skeleton className="h-4 w-16" />
-            <Skeleton className="h-4 w-16" />
-          </div>
-          <Button variant={"outline"} className="flex w-full gap-2 opacity-50 cursor-not-allowed">
-            <Skeleton className="h-4 w-full" />
-          </Button>
-        </>
-      ) : (
-        <>
-          <p className="text-justify">{repo.description || "Sem descrição"}</p>
-          <div className="flex flex-wrap gap-2 mt-4">
-            {repo.topics.map((topic: string) => (
-              <Badge key={topic}>#{topic}</Badge>
-            ))}
-          </div>
-          <a href={repo.html_url} className="w-full" target="_blank" rel="noopener noreferrer">
-            <Button variant={"outline"} className="flex w-full gap-2">
-              <GitHubLogoIcon />
-              See on Github
-            </Button>
-          </a>
-        </>
-      )}
-    </CardContent>
-  </Card>
-);
-
-// BlogCard reutilizando o layout de ProjectCard
 const BlogCard: React.FC<{ article?: any; loading?: boolean }> = ({ article, loading }) => (
   <Card className="hover:shadow-lg transition-shadow">
     <CardHeader>
