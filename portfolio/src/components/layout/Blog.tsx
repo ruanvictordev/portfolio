@@ -44,7 +44,7 @@ export default function DevToBlog({ username }: { username: string }) {
       )}
 
       {!loading && articles.length > 0 && (
-        <div className="w-full flex flex-col ">
+        <div className="w-full flex flex-col gap-4">
           {articles.map((article) => (
             <a href={article.url} target="_blank" key={article.id}>
               <Card className="w-full flex justify-between items-center hover:cursor-pointer hover:bg-secondary hover:shadow-lg transition-shadow">
@@ -57,7 +57,7 @@ export default function DevToBlog({ username }: { username: string }) {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="py-0 text-lg max-md:text-xs flex justify-center gap-2 items-center">
-                  <p>{article.page_views_count} views</p>
+                  <p>{article.positive_reactions_count} likes</p>
                   <a
                     href={article.url}
                     target="_blank"

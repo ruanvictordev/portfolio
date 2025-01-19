@@ -4,7 +4,7 @@ interface Article {
   id: number;
   title: string;
   published_at: string;
-  page_views_count: number;
+  positive_reactions_count: number;
   url: string;
 }
 
@@ -20,7 +20,7 @@ export const useDevToArticles = (username: string) => {
 
       try {
         const response = await fetch(
-          `https://cors-anywhere.herokuapp.com/https://dev.to/api/articles?username=${username}`
+          `https://dev.to/api/articles?username=${username}`
         );
 
         if (!response.ok) {
