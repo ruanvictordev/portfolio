@@ -33,8 +33,8 @@ export default function Home() {
             </p>
             <ReactAudioPlayer className="max-md:w-2/3" src="/audio/ia_audio.wav" controls />
             <div className="flex gap-4 max-md:flex-col max-md:w-full">
-              <a href="https://github.com/user-attachments/files/17500566/Ruan-Curriculo-ATS.EN-US.pdf" download>
-                <Button className="max-md:w-3/5">Download CV</Button>
+              <a href="https://docs.google.com/document/d/1_3D13fmxLZLi8p-KkfWOLuDqGZg0GAFC/edit?usp=sharing&ouid=112805369781832032718&rtpof=true&sd=true" target="_blank">
+                <Button className="max-md:w-3/5">See my CV</Button>
               </a>
             </div>
           </div>

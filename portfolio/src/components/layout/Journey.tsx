@@ -24,7 +24,7 @@ export default function Journey() {
       </div>
 
       <section className="w-full flex justify-center items-center my-12">
-        <Tabs defaultValue="formation" className="w-1/2 max-md:w-full">
+        <Tabs defaultValue="formation" className="w-full max-md:w-full">
           <TabsList className="flex w-full justify-evenly">
             <TabsTrigger value="formation" className="flex-1">Formation</TabsTrigger>
             <TabsTrigger value="experience" className="flex-1">Experience</TabsTrigger>
