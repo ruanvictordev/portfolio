@@ -26,17 +26,29 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
         ))}
       </div>
       <div className="flex flex-col gap-2">
-        <a
-          href={project.repositoryLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full"
-        >
-          <Button variant="outline" className="flex w-full gap-2">
+        {project.repositoryLink ? (
+          <a
+            href={project.repositoryLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full"
+          >
+            <Button variant="outline" className="flex w-full gap-2">
+              <GitHubLogoIcon />
+              View on GitHub
+            </Button>
+          </a>
+        ) : (
+          <Button
+            variant="outline"
+            className="flex w-full gap-2 cursor-not-allowed"
+            disabled
+          >
             <GitHubLogoIcon />
             View on GitHub
           </Button>
-        </a>
+        )}
+
         <a
           href={project.deployLink}
           target="_blank"
