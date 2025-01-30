@@ -1,3 +1,4 @@
+import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Button } from "../ui/button";
 import ReactAudioPlayer from "react-audio-player";
 
@@ -18,24 +19,54 @@ export default function Home() {
               studying, creating and sharing knowledge.
             </p>
             <p className="text-base leading-relaxed">
-              I work mainly in the{" "}
+              I contribute mainly in{" "}
               <a
                 className="underline font-semibold"
                 href="https://codewarriorsdevs.vercel.app/"
               >
                 Code Warriors
               </a>{" "}
-              community as an organizer and founder organizing events and open
-              source projects.
+              community organizing events and projects open source.
             </p>
-            <p className="text-base leading-relaxed">
-              Listen my CV with AI in podcast format:
-            </p>
-            <ReactAudioPlayer className="max-md:w-2/3" src="/audio/ia_audio.wav" controls />
-            <div className="flex gap-4 max-md:flex-col max-md:w-full">
-              <a href="https://docs.google.com/document/d/1_3D13fmxLZLi8p-KkfWOLuDqGZg0GAFC/edit?usp=sharing&ouid=112805369781832032718&rtpof=true&sd=true" target="_blank">
-                <Button className="max-md:w-3/5">See my CV</Button>
+            <div className="flex gap-4 max-md:flex-col max-md:w-full max-md:justify-center max-md:items-center">
+              <a
+                href="https://docs.google.com/document/d/1_3D13fmxLZLi8p-KkfWOLuDqGZg0GAFC/edit?usp=sharing&ouid=112805369781832032718&rtpof=true&sd=true"
+                target="_blank"
+              >
+                <Button className="max-md:w-full">See my CV</Button>
               </a>
+              <div className="flex gap-4">
+                <Button
+                  className="px-2"
+                  variant="outline"
+                  onClick={() =>
+                    window.open("https://github.com/ruanvictordev", "_blank")
+                  }
+                >
+                  <GitHubLogoIcon />
+                </Button>
+                <Button
+                  className="px-2"
+                  variant="outline"
+                  onClick={() =>
+                    window.open("https://instagram.com/ruanvictordev", "_blank")
+                  }
+                >
+                  <InstagramLogoIcon />
+                </Button>
+                <Button
+                  className="px-2"
+                  variant="outline"
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/company/ruanvictordev/",
+                      "_blank"
+                    )
+                  }
+                >
+                  <LinkedInLogoIcon />
+                </Button>
+              </div>
             </div>
           </div>
           <div className="flex-shrink-0 max-md:hidden">
