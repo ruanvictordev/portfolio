@@ -74,7 +74,7 @@ const Projects: React.FC = () => (
     <section className="w-full flex justify-center items-center my-12">
       {projects.length === 0 ? (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 w-full">
-          {[...Array(6)].map((_, i) => (
+          {[...Array(projects.length)].map((_, i) => (
             <Skeleton key={i} className="h-60 w-full" />
           ))}
         </div>
