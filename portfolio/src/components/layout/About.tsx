@@ -21,19 +21,36 @@ export default function About() {
 
           <div className="flex flex-col gap-4 w-full">
             <p className="text-base leading-relaxed text-justify">
-              Hello, world! My name is <Badge>Ruan Victor</Badge>, and I’m a passionate frontend developer based in Brazil. I specialize in crafting engaging and dynamic web applications with a keen focus on user experience and modern design principles. My goal is to create intuitive and accessible interfaces that users enjoy interacting with.
+              Hello world! Welcome to my Portfolio! My name is Ruan Victor, born
+              and raised in Pedro II - PI. I am currently a Frontend Developer
+              and one of the organizers of the Code Warriors developer
+              community, a community focused on sharing knowledge in the tech
+              area.
             </p>
             <p className="text-base leading-relaxed text-justify">
-              At the moment, I work as a freelancer, delivering tailor-made digital solutions for clients, while also taking on the role of a community organizer and leader with Code Warriors, a vibrant community focused on collaboration, open-source contributions, and growing as developers together. I’m proud to be at the helm of this initiative, fostering an environment where both new and experienced developers can share knowledge and grow their skills.
+              I started in the area in 2018 when I had contact with programming
+              during the Computer Science Technician course at IFPI - Pedro II
+              Campus and, later, I started higher education in Systems Analysis
+              and Development at the same institution, since then I have been
+              improving myself, participating in events and meeting people and
+              the whole world of the area.
             </p>
             <p className="text-base leading-relaxed text-justify">
-              In addition to that, I actively mentor and support other developers by participating in various coding communities. I love helping others solve challenges, improve their code, and guide them in their professional journey.
+              My main technical skills involving Frontend Development include:
+              <u>ReactJS</u>, <u>TypeScript</u>, <u>JavaScript</u>, <u>CSS</u>,{" "}
+              <u>SCSS</u>, <u>Tailwind</u>, <u>Bootstrap</u>. In addition to
+              these, in Backend, I have basic knowledge through personal
+              projects with <u>NodeJS</u>, <u>PHP</u>, <u>MySQL</u>, <u>MongoDB</u>. I have
+              slight experience with design (creating web application layouts
+              with the <u>Figma</u> tool), I also have knowledge of agile
+              development (<u>SCRUM</u> and <u>Kanban</u> methodologies) and
+              soft skills for collaborative work aimed at communication and the
+              delivery of valuable products.
             </p>
             <p className="text-base leading-relaxed text-justify">
-              I’m also passionate about agile methodologies and project management. Collaborating with teams, refining workflows, and delivering projects iteratively with a clear focus on goals and quality is something I deeply enjoy.
-            </p>
-            <p className="text-base leading-relaxed text-justify">
-              Beyond coding, I’m a big fan of mobile games, and I like to engage in the strategic thinking that comes with playing chess. Of course, I never miss a chance to indulge in some delicious pizza because who doesn’t love pizza? 😄🍕
+              In addition to coding, I am a big fan of mobile games, books and
+              dabbling in chess. And, of course, I like to have a coffee while I
+              do all this! After all, who doesn't like coffee? ☕
             </p>
           </div>
         </div>
