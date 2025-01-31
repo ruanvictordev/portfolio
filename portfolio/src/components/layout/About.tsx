@@ -40,7 +40,7 @@ export default function About() {
               My main technical skills involving Frontend Development include:{" "}
               <strong>ReactJS</strong>, <strong>TypeScript</strong>,{" "}
               <strong>JavaScript</strong>, <strong>CSS</strong>,{" "}
-              <strong>SCSS</strong>, <strong>Tailwind</strong>,{" "}
+              <strong>Tailwind</strong>,{" "}
               <strong>Bootstrap</strong>. In addition to these, in Backend, I
               have basic knowledge through personal projects with{" "}
               <strong>NodeJS</strong>, <strong>PHP</strong>,{" "}
