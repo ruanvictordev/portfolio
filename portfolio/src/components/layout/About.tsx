@@ -29,23 +29,27 @@ export default function About() {
             </p>
             <p className="text-base leading-relaxed text-justify">
               I started in the area in 2018 when I had contact with programming
-              during the Computer Science Technician course at IFPI - Pedro II
-              Campus and, later, I started higher education in Systems Analysis
-              and Development at the same institution, since then I have been
-              improving myself, participating in events and meeting people and
-              the whole world of the area.
+              during the <strong>Computer Technician</strong> course at IFPI -
+              Pedro II Campus and, later, I started higher education in{" "}
+              <strong>Systems Analysis and Development</strong> at the same
+              institution. Since then, I have been improving myself,
+              participating in events, meeting people, and exploring the entire
+              world of technology.
             </p>
             <p className="text-base leading-relaxed text-justify">
-              My main technical skills involving Frontend Development include:
-              <u>ReactJS</u>, <u>TypeScript</u>, <u>JavaScript</u>, <u>CSS</u>,{" "}
-              <u>SCSS</u>, <u>Tailwind</u>, <u>Bootstrap</u>. In addition to
-              these, in Backend, I have basic knowledge through personal
-              projects with <u>NodeJS</u>, <u>PHP</u>, <u>MySQL</u>, <u>MongoDB</u>. I have
-              slight experience with design (creating web application layouts
-              with the <u>Figma</u> tool), I also have knowledge of agile
-              development (<u>SCRUM</u> and <u>Kanban</u> methodologies) and
-              soft skills for collaborative work aimed at communication and the
-              delivery of valuable products.
+              My main technical skills involving Frontend Development include:{" "}
+              <strong>ReactJS</strong>, <strong>TypeScript</strong>,{" "}
+              <strong>JavaScript</strong>, <strong>CSS</strong>,{" "}
+              <strong>SCSS</strong>, <strong>Tailwind</strong>,{" "}
+              <strong>Bootstrap</strong>. In addition to these, in Backend, I
+              have basic knowledge through personal projects with{" "}
+              <strong>NodeJS</strong>, <strong>PHP</strong>,{" "}
+              <strong>MySQL</strong>, <strong>MongoDB</strong>. I have slight
+              experience with design (creating web application layouts with the{" "}
+              <strong>Figma</strong> tool), I also have knowledge of agile
+              development (<strong>SCRUM</strong> and <strong>Kanban</strong>{" "}
+              methodologies) and soft skills for collaborative work aimed at
+              communication and the delivery of valuable products.
             </p>
             <p className="text-base leading-relaxed text-justify">
               In addition to coding, I am a big fan of mobile games, books and
