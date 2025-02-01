@@ -1,5 +1,3 @@
-import { Badge } from "../ui/badge";
-
 export default function About() {
   return (
     <section className="w-full" id="about">

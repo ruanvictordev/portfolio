@@ -14,7 +14,7 @@ export default function App() {
         <Home />
         <About />
         <Projects />
-        <DevToBlog username="ruanvictordev" />
+        <DevToBlog username="ruanvictordevblog" />
         <Journey />
       </main>
       <CommunityFooter />

@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
 
 const BlogCard: React.FC<{ article?: any; loading?: boolean }> = ({ article, loading }) => (
-  <Card className="hover:shadow-lg transition-shadow">
+  <Card className="hover:shadow-lg transition-shadow flex flex-col h-full overflow-hidden">
     <CardHeader>
       {loading ? (
         <Skeleton className="h-6 w-3/4 mb-2" />
@@ -15,7 +15,7 @@ const BlogCard: React.FC<{ article?: any; loading?: boolean }> = ({ article, loa
         </>
       )}
     </CardHeader>
-    <CardContent className="flex flex-col w-full gap-4">
+    <CardContent className="flex flex-col justify-between w-full h-full gap-4">
       {loading ? (
         <Skeleton className="h-4 w-full" />
       ) : (
@@ -59,7 +59,7 @@ export default function DevToBlog({ username }: { username: string }) {
 
       {loading && (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 6 }).map((_, index) => (
+          {Array.from({ length: articles.length }).map((_, index) => (
             <BlogCard key={index} loading />
           ))}
         </div>

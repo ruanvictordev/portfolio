@@ -1,6 +1,5 @@
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Button } from "../ui/button";
-import ReactAudioPlayer from "react-audio-player";
 
 export default function Home() {
   return (

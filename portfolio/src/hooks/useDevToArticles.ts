@@ -21,7 +21,7 @@ export const useDevToArticles = (username: string) => {
 
       try {
         const response = await fetch(
-          `https://dev.to/api/articles?username=${username}`
+          `https://dev.to/api/organizations/${username}/articles`
         );
 
         if (!response.ok) {
@@ -30,6 +30,8 @@ export const useDevToArticles = (username: string) => {
         }
 
         const data = await response.json();
+
+        console.log(data);
 
         if (Array.isArray(data)) {
           setArticles(data);
