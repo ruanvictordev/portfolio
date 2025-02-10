@@ -65,12 +65,11 @@ export default function Journey() {
                     <AccordionContent className="min-h-[100px]">
                       In this course, I learned:
                       <ul>
-                        <li>- Hardware troubleshooting and maintenance.</li>
-                        <li>- Network configuration and management (LANs).</li>
-                        <li>- Operating system installation and optimization.</li>
-                        <li>- Basic programming logic using Bash and Python.</li>
-                        <li>- Cybersecurity fundamentals.</li>
-                        <li>- Customer service and support skills.</li>
+                        <li>- Hardware Architecture - Basic.</li>
+                        <li>- Software Architecture.</li>
+                        <li>- Operating Systems.</li>
+                        <li>- Programming Logic.</li>
+                        <li>- Introduction to Information Security.</li>
                       </ul>
                     </AccordionContent>
                   </AccordionItem>
