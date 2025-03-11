@@ -27,14 +27,15 @@ export default function Home() {
               </a>{" "}
               community organizing events and projects open source.
             </p>
-            <div className="flex gap-4 max-md:flex-col max-md:w-full max-md:justify-center max-md:items-center">
+            <div className="flex gap-4 max-md:flex-col max-md:w-5/6 max-md:justify-center max-md:items-center">
               <a
                 href="https://docs.google.com/document/d/1_3D13fmxLZLi8p-KkfWOLuDqGZg0GAFC/edit?usp=sharing&ouid=112805369781832032718&rtpof=true&sd=true"
+                className="max-md:w-full"
                 target="_blank"
               >
                 <Button className="max-md:w-full">See my CV</Button>
               </a>
-              <div className="flex gap-4">
+              <div className="flex gap-4 max-md:justify-between max-md:w-full">
                 <Button
                   className="px-2"
                   variant="outline"

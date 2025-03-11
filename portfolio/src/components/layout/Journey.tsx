@@ -46,14 +46,15 @@ export default function Journey() {
                       (2021-2024) Systems Analysis and Development.
                     </AccordionTrigger>
                     <AccordionContent className="min-h-[100px]">
-                      In this course, I learned:
+                      Activities I have been involved in:
                       <ul>
-                        <li>- Software development methodologies, including Agile and Waterfall.</li>
-                        <li>- Programming languages like Java, JavaScript, and Python.</li>
-                        <li>- Database management using SQL and NoSQL databases.</li>
-                        <li>- Systems analysis techniques, such as UML and DFD.</li>
-                        <li>- Web applications development (React and Node.js).</li>
-                        <li>- Software testing and quality assurance practices.</li>
+                        <li>Organization of the event "II Opala Tech";</li>
+                        <li>Instructor of the mini-course: "Frontend Development: HTML, CSS, and JS" at the Opala Tech event;</li>
+                        <li>Technical Visit: LAPEC - IFPI Campus Piripiri;</li>
+                        <li>Instructor of the mini-course: "Git and GitHub: Developing Essential Skills for Collaboration and Version Control" at the ENUCOMPI event;</li>
+                        <li>Publication of a Book Chapter in SBC (Brazilian Computer Society): "Git and GitHub: Developing Essential Skills for Collaboration and Version Control";</li>
+                        <li>Project Poster Presentation: "Web System: NGO Cuidadores de 4 Patas";</li>
+                        <li>Undergraduate Thesis Defense: "OuviP2: Web Application for Urban Problem Management and Analysis";</li>
                       </ul>
                     </AccordionContent>
                   </AccordionItem>
@@ -93,7 +94,7 @@ export default function Journey() {
                     <AccordionTrigger className="text-left">
                       (2024-Today) Freelancer.
                     </AccordionTrigger>
-                    <AccordionContent className="min-h-[100px]"> 
+                    <AccordionContent className="min-h-[100px]">
                       In this experience, I learned:
                       <ul>
                         <li>- Managing client expectations and delivering quality work under tight deadlines.</li>
@@ -109,7 +110,7 @@ export default function Journey() {
                     <AccordionTrigger className="text-left">
                       (2024-Today) Community Leader - Code Warriors.
                     </AccordionTrigger>
-                    <AccordionContent className="min-h-[100px]"> 
+                    <AccordionContent className="min-h-[100px]">
                       In this experience, I learned:
                       <ul>
                         <li>- Leadership and team-building skills.</li>
